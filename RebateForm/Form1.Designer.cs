@@ -409,9 +409,9 @@ namespace RebateForm
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(1075, 912);
+            this.saveButton.Location = new System.Drawing.Point(1063, 912);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(111, 39);
+            this.saveButton.Size = new System.Drawing.Size(123, 47);
             this.saveButton.TabIndex = 34;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -421,10 +421,11 @@ namespace RebateForm
             // 
             this.cancelButton.Location = new System.Drawing.Point(1213, 912);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(111, 39);
+            this.cancelButton.Size = new System.Drawing.Size(133, 47);
             this.cancelButton.TabIndex = 35;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // RebateForm
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,7 @@ namespace RebateForm
         private DateTime firstCharEntered;
         private DateTime savedRecord;
         private int backSpaceUsed;
+
 
         public Record()
         {
@@ -59,20 +61,48 @@ namespace RebateForm
                 ProofOfPurchraseAttached + ","+this.dateReceived+")";
         }
 
-        public Boolean IsValid()
+        public ArrayList IsValid()
         {
-            if (this.fname.Length == 0 || this.lname.Length == 0 || this.address_1.Length == 0 || this.city.Length == 0 ||
-                this.state.Length == 0 || this.zipCode.Length == 0 || this.phNumber.Length != 10 || this.emailId.Length == 0)
+            ArrayList errors = new ArrayList();
+            if(this.fname.Length == 0)
             {
-                return false;
+                errors.Add("First Name cannot be Blank.");
+            }
+            if (this.lname.Length == 0)
+            {
+                errors.Add("Last Name cannot be Blank.");
+            }
+            if (this.address_1.Length == 0)
+            {
+                errors.Add("Address 1 cannot be Blank.");
+            }
+            if (this.city.Length == 0)
+            {
+                errors.Add("City Name cannot be Blank.");
+            }
+            if (this.state.Length == 0)
+            {
+                errors.Add("State Name cannot be Blank.");
+            }
+            if (this.zipCode.Length == 0)
+            {
+                errors.Add("Zipcode cannot be Blank.");
+            }
+            if (this.phNumber.Length < 10)
+            {
+                errors.Add("Enter valid Phone Number.");
+            }
+            if (this.emailId.Length == 0)
+            {
+                errors.Add("Email id cannot be Blank.");
             }
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(this.emailId);
             if (!match.Success)
             {
-                return false;
+                errors.Add("Enter a valid Email id.");
             }
-            return true;
+            return errors;
         }
 
         public String[] ToArray()
