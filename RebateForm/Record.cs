@@ -10,17 +10,17 @@ namespace RebateForm
     class Record
     {
         private String fname;
-        private Nullable<char> mname;
+        private char mname;
         private String lname;
         private String address_1;
         private String address_2;
         private String city;
         private String state;
         private String zipCode;
-        private Nullable<char> gender;
+        private char gender;
         private String phNumber;
         private String emailId;
-        private Nullable<Boolean> proofOfPurchraseAttached;
+        private Boolean proofOfPurchraseAttached;
         private DateTime dateReceived;
 
         private DateTime firstCharEntered;
@@ -31,12 +31,12 @@ namespace RebateForm
         {
         }
 
-        public Record(string fname, char? mname, string lname, string address_1, string address_2, string city, 
-            string state, string zipCode, char? gender, string phNumber, string emailId, bool? proofOfPurchraseAttached, 
+        public Record(string fname, char mname, string lname, string address_1, string address_2, string city, 
+            string state, string zipCode, char gender, string phNumber, string emailId, bool proofOfPurchraseAttached, 
             DateTime dateReceived, DateTime firstCharEntered, DateTime savedRecord, int backSpaceUsed)
         {
             this.fname = fname;
-            this.Mname1 = mname;
+            this.Mname = mname;
             this.lname = lname;
             this.address_1 = address_1;
             this.address_2 = address_2;
@@ -54,9 +54,9 @@ namespace RebateForm
         }
 
         public override String ToString() {
-            return "("+this.fname+","+this.mname + ","+this.lname + ","+this.address_1 + ","+this.address_2 + ","+
-                this.city + ","+this.state + ","+this.zipCode + ","+this.gender + ","+this.phNumber + ","+this.emailId + ","+
-                proofOfPurchraseAttached + ","+this.dateReceived+")";
+            return "("+this.fname+","+this.Mname + ","+this.lname + ","+this.address_1 + ","+this.address_2 + ","+
+                this.city + ","+this.state + ","+this.zipCode + ","+this.Gender + ","+this.phNumber + ","+this.emailId + ","+
+                ProofOfPurchraseAttached + ","+this.dateReceived+")";
         }
 
         public Boolean IsValid()
@@ -75,6 +75,29 @@ namespace RebateForm
             return true;
         }
 
+        public String[] ToArray()
+        {
+            return new string[]
+            {
+                this.fname,
+                this.Mname.ToString(),
+                this.lname,
+                this.address_1,
+                this.address_2,
+                this.city,
+                this.state,
+                this.zipCode,
+                this.Gender.ToString(),
+                this.phNumber,
+                this.emailId,
+                this.ProofOfPurchraseAttached.ToString(),
+                this.dateReceived.ToString(),
+                this.firstCharEntered.ToString(),
+                this.savedRecord.ToString(),
+                this.backSpaceUsed.ToString()
+            };
+        }
+
         public string Fname { get => fname; set => fname = value; }
         public string Lname { get => lname; set => lname = value; }
         public string Address_1 { get => address_1; set => address_1 = value; }
@@ -88,9 +111,9 @@ namespace RebateForm
         public DateTime SavedRecord { get => savedRecord; set => savedRecord = value; }
         public int BackSpaceUsed { get => backSpaceUsed; set => backSpaceUsed = value; }
         public string City { get => city; set => city = value; }
-        public char? Mname1 { get => mname; set => mname = value; }
-        public char? Gender { get => gender; set => gender = value; }
-        public bool? ProofOfPurchraseAttached { get => proofOfPurchraseAttached; set => proofOfPurchraseAttached = value; }
+        public char Mname { get => mname; set => mname = value; }
+        public char Gender { get => gender; set => gender = value; }
+        public bool ProofOfPurchraseAttached { get => proofOfPurchraseAttached; set => proofOfPurchraseAttached = value; }
 
         public override bool Equals(object obj)
         {
