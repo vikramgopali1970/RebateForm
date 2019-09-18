@@ -42,7 +42,6 @@ namespace RebateForm
         private void AddButton_Click(object sender, EventArgs e)
         {
             Record rc = GetFieldDetails();
-            Console.WriteLine(rc.IsValid());
             ArrayList errors = rc.IsValid();
             if(this.add && !this.modify)
             {
@@ -73,17 +72,30 @@ namespace RebateForm
                 if (!this.Set.Contains(rc))
                 {
                     this.Set.Add(rc);
+                    Record old_rc = this.Data[this.tag];
+                    this.Set.Add(old_rc);
                     this.Data[this.tag] = rc;
                     ListViewItem item = new ListViewItem(new[] { rc.Fname, rc.Lname, rc.PhNumber });
                     item.Tag = this.tag;
                     this.viewPortListView.Items[this.index]=item;
                     this.ClearFields(this.Controls.OfType<TextBox>());
                 }
-                Console.WriteLine("Here to modify the records");
             }
             else
             {
                 Console.WriteLine("Application is out of Sync with the data");
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if(this.index >= 0 && this.tag >= 0 && this.modify && !this.add)
+            {
+                this.viewPortListView.Items.RemoveAt(this.index);
+                Record rc = this.Data[this.tag];
+                this.Data.Remove(this.tag);
+                this.Set.Remove(rc);
+                this.ClearFields(this.Controls.OfType<TextBox>());
             }
         }
 
@@ -104,10 +116,8 @@ namespace RebateForm
             {
                 int key = (int)this.viewPortListView.SelectedItems[0].Tag;
                 PopulateFields(this.Data[key]);
-                this.tag = key;
-                this.index = this.viewPortListView.Items.IndexOf(this.viewPortListView.SelectedItems[0]);
-                this.add = false;
-                this.modify = true;
+                int index = this.viewPortListView.Items.IndexOf(this.viewPortListView.SelectedItems[0]);
+                this.EnableModifyMode(key, index);
             }
             
         }

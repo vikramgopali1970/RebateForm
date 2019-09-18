@@ -90,10 +90,7 @@ namespace RebateForm
             {
                 element.Clear();
             }
-            this.add = true;
-            this.modify = false;
-            this.tag = -1;
-            this.index = -1;
+            this.DisableModifyMode();
         }
 
         private void AddItemToList(Record rc, int tag)
@@ -101,6 +98,22 @@ namespace RebateForm
             ListViewItem item = new ListViewItem(new[] { rc.Fname, rc.Lname, rc.PhNumber });
             item.Tag = tag;
             this.viewPortListView.Items.Add(item);
+        }
+
+        private void EnableModifyMode(int key, int index)
+        {
+            this.tag = key;
+            this.index = index;
+            this.add = false;
+            this.modify = true;
+        }
+
+        private void DisableModifyMode()
+        {
+            this.add = true;
+            this.modify = false;
+            this.tag = -1;
+            this.index = -1;
         }
 
     }
