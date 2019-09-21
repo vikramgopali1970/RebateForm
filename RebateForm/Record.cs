@@ -11,17 +11,17 @@ namespace RebateForm
     class Record
     {
         private String fname;
-        private char mname;
+        private String mname;
         private String lname;
         private String address_1;
         private String address_2;
         private String city;
         private String state;
         private String zipCode;
-        private char gender;
+        private String gender;
         private String phNumber;
         private String emailId;
-        private Boolean proofOfPurchraseAttached;
+        private String proofOfPurchraseAttached;
         private DateTime dateReceived;
 
         private DateTime firstCharEntered;
@@ -33,8 +33,8 @@ namespace RebateForm
         {
         }
 
-        public Record(string fname, char mname, string lname, string address_1, string address_2, string city, 
-            string state, string zipCode, char gender, string phNumber, string emailId, bool proofOfPurchraseAttached, 
+        public Record(string fname, String mname, string lname, string address_1, string address_2, string city, 
+            string state, string zipCode, String gender, string phNumber, string emailId, String proofOfPurchraseAttached, 
             DateTime dateReceived, DateTime firstCharEntered, DateTime savedRecord, int backSpaceUsed)
         {
             this.fname = fname;
@@ -87,6 +87,10 @@ namespace RebateForm
             if (this.zipCode.Length == 0)
             {
                 errors.Add("Zipcode cannot be Blank.");
+            }
+            if (this.zipCode.Length != 5 || this.zipCode.Length != 9)
+            {
+                errors.Add("Zipcode is invalid.");
             }
             if (this.phNumber.Length < 10)
             {
@@ -141,9 +145,9 @@ namespace RebateForm
         public DateTime SavedRecord { get => savedRecord; set => savedRecord = value; }
         public int BackSpaceUsed { get => backSpaceUsed; set => backSpaceUsed = value; }
         public string City { get => city; set => city = value; }
-        public char Mname { get => mname; set => mname = value; }
-        public char Gender { get => gender; set => gender = value; }
-        public bool ProofOfPurchraseAttached { get => proofOfPurchraseAttached; set => proofOfPurchraseAttached = value; }
+        public string Mname { get => mname; set => mname = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public string ProofOfPurchraseAttached { get => proofOfPurchraseAttached; set => proofOfPurchraseAttached = value; }
 
         public override bool Equals(object obj)
         {

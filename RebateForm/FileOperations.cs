@@ -42,8 +42,8 @@ namespace RebateForm
             foreach (String data in dataVals)
             {
                 String[] vals = data.Split('\t');
-                Record rc = new Record(vals[0], vals[1].ToCharArray()[0], vals[2], vals[3], vals[4], vals[5],
-                    vals[6], vals[7], vals[8].ToCharArray()[0], vals[9], vals[10], Boolean.Parse(vals[11]),
+                Record rc = new Record(vals[0], vals[1], vals[2], vals[3], vals[4], vals[5],
+                    vals[6], vals[7], vals[8], vals[9], vals[10], vals[11],
                     Convert.ToDateTime(vals[12]), Convert.ToDateTime(vals[13]),
                     Convert.ToDateTime(vals[14]), Convert.ToInt32(vals[15]));
                 this.Data.Add(count, rc);

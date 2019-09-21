@@ -12,10 +12,10 @@ namespace RebateForm
         private Record GetFieldDetails()
         {
             String fname = FnameTextBox.Text.Trim();
-            char mname = '-';
+            String mname = "-";
             if (MnameTextBox.Text.Length > 0)
             {
-                mname = MnameTextBox.Text.ToCharArray()[0];
+                mname = MnameTextBox.Text;
             }
             String lname = LnameTextBox.Text.Trim();
             String address_1 = Address_1TextBox.Text.Trim();
@@ -23,29 +23,25 @@ namespace RebateForm
             String city = CityTextBox.Text.Trim();
             String state = StateTextBox.Text.Trim();
             String zipCode = ZipCodeTextBox.Text.Trim();
-            char gender = '-';
-            if (MaleRadioButton.Checked)
+            String gender = "-";
+            if (this.genderTextBox.Text.Equals('Y'))
             {
-                gender = 'M';
-            }
-            else if (FemaleRadioButton.Checked)
-            {
-                gender = 'F';
+                gender = "YES";
             }
             else
             {
-                Console.WriteLine("no gender selected");
+                gender = "NO";
             }
             String phNumber = PhoneNumberMaskedTextBox.Text.Trim();
             String email = EmailIdTextBox.Text.Trim();
-            bool proofOfPurchraseAttached = true;
-            if (YesRadioButton.Checked)
+            String proofOfPurchraseAttached = "-";
+            if(this.proofOfPurchaseTextBox.Text == 'Y'.ToString())
             {
-                proofOfPurchraseAttached = true;
+                proofOfPurchraseAttached = "YES";
             }
-            else if (NoRadioButton.Checked)
+            else if(this.proofOfPurchaseTextBox.Text == 'N'.ToString())
             {
-                proofOfPurchraseAttached = false;
+                proofOfPurchraseAttached = "NO";
             }
             DateTime dateReceived = DateReceivedTimePicker.Value;
             Record rc = new Record(fname, mname, lname, address_1, address_2, city, state, zipCode, gender, phNumber, email, proofOfPurchraseAttached,
@@ -63,24 +59,10 @@ namespace RebateForm
             this.CityTextBox.Text = rc.City;
             this.StateTextBox.Text = rc.State;
             this.ZipCodeTextBox.Text = rc.ZipCode;
-            if (rc.Gender == 'M')
-            {
-                this.MaleRadioButton.PerformClick();
-            }
-            else
-            {
-                this.FemaleRadioButton.PerformClick();
-            }
+            this.genderTextBox.Text = rc.Gender;
             this.PhoneNumberMaskedTextBox.Text = rc.PhNumber;
             this.EmailIdTextBox.Text = rc.EmailId;
-            if (rc.ProofOfPurchraseAttached)
-            {
-                this.YesRadioButton.PerformClick();
-            }
-            else
-            {
-                this.NoRadioButton.PerformClick();
-            }
+            this.proofOfPurchaseTextBox.Text = rc.ProofOfPurchraseAttached.Substring(0, 1);
             this.DateReceivedTimePicker.Value = rc.DateReceived;
         }
 
@@ -114,6 +96,32 @@ namespace RebateForm
             this.modify = false;
             this.tag = -1;
             this.index = -1;
+        }
+
+        private Boolean EnableAddButton()
+        {
+            if(this.FnameTextBox.Text.Length == 0 || this.LnameTextBox.Text.Length == 0 || this.Address_1TextBox.Text.Length == 0 ||
+               this.CityTextBox.Text.Length == 0 || this.StateTextBox.Text.Length == 0 || this.ZipCodeTextBox.Text.Length == 0 || 
+                    this.genderTextBox.Text.Length == 0 || this.PhoneNumberMaskedTextBox.Text.Length != 10 || this.EmailIdTextBox.Text.Length == 0 ||
+                    this.proofOfPurchaseTextBox.Text.Length == 0 || this.DateReceivedTimePicker.Value < new DateTime().Date)
+            {
+                Console.WriteLine(this.PhoneNumberMaskedTextBox.Text.Length);
+                return false;
+            }
+            return true;
+        }
+
+        private void ExpandScreen(Control c)
+        {
+            int iHeight = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
+            this.Height += iHeight;
+            this.viewPortListView.Height += iHeight;
+            this.saveButton.Height += iHeight;
+            int iWidth = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
+            this.viewPortListView.Width += iWidth;
+            //this.saveButton.Width += iWidth;
+            this.Width += iWidth;
+            this.CenterToScreen();
         }
 
     }

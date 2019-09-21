@@ -55,6 +55,7 @@ namespace RebateForm
                         this.Set.Add(rc);
                         this.AddItemToList(rc, count++);
                         this.ClearFields(this.Controls.OfType<TextBox>());
+                        this.stripStatusLabel.Text = "Record added successfully";
                     }
                     else
                     {
@@ -79,6 +80,7 @@ namespace RebateForm
                     item.Tag = this.tag;
                     this.viewPortListView.Items[this.index]=item;
                     this.ClearFields(this.Controls.OfType<TextBox>());
+                    this.stripStatusLabel.Text = "Record modified successfully";
                 }
             }
             else
@@ -96,17 +98,22 @@ namespace RebateForm
                 this.Data.Remove(this.tag);
                 this.Set.Remove(rc);
                 this.ClearFields(this.Controls.OfType<TextBox>());
+                this.stripStatusLabel.Text = "Deleted the Record";
             }
+
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
             this.ClearFields(this.Controls.OfType<TextBox>());
+            this.AddButton.Enabled = false;
+            this.stripStatusLabel.Text = "Add Mode";
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             this.WriteToFile();
+            this.stripStatusLabel.Text = "Data saved to File";
         }
 
         private void ViewPortListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,6 +125,8 @@ namespace RebateForm
                 PopulateFields(this.Data[key]);
                 int index = this.viewPortListView.Items.IndexOf(this.viewPortListView.SelectedItems[0]);
                 this.EnableModifyMode(key, index);
+                this.stripStatusLabel.Text = "Modify Mode";
+                this.AddButton.Enabled = true;
             }
             
         }
@@ -125,6 +134,29 @@ namespace RebateForm
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void RebateForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Console.WriteLine(e.KeyChar);
+            if (this.EnableAddButton())
+            {
+                this.AddButton.Enabled = true;
+            }
+            else
+            {
+                this.AddButton.Enabled = false;
+            }
+            
+        }
+
+        private void RebateForm_SizeChanged(object sender, EventArgs e)
+        {
+            foreach(Control c in this.Controls)
+            {
+                //this.ExpandScreen(c);
+            }
+            
         }
     }
 }
