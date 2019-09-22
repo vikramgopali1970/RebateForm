@@ -24,6 +24,7 @@ namespace RebateForm
             String city = CityTextBox.Text.Trim();
             String state = StateTextBox.Text.Trim();
             String zipCode = ZipCodeTextBox.Text.Trim();
+            Console.WriteLine("here in setting rc "+zipCode + " " + zipCode.Length);
             String gender = "-";
             if (this.genderTextBox.Text.Equals('Y'))
             {

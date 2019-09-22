@@ -168,6 +168,7 @@ namespace RebateForm
             this.FnameTextBox.Name = "FnameTextBox";
             this.FnameTextBox.Size = new System.Drawing.Size(249, 31);
             this.FnameTextBox.TabIndex = 2;
+            this.FnameTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // MnameTextBox
             // 
@@ -176,6 +177,7 @@ namespace RebateForm
             this.MnameTextBox.Name = "MnameTextBox";
             this.MnameTextBox.Size = new System.Drawing.Size(249, 31);
             this.MnameTextBox.TabIndex = 3;
+            this.MnameTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // LnameLabel
             // 
@@ -195,6 +197,7 @@ namespace RebateForm
             this.LnameTextBox.Name = "LnameTextBox";
             this.LnameTextBox.Size = new System.Drawing.Size(249, 31);
             this.LnameTextBox.TabIndex = 6;
+            this.LnameTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // Address_1Label
             // 
@@ -224,6 +227,7 @@ namespace RebateForm
             this.Address_1TextBox.Name = "Address_1TextBox";
             this.Address_1TextBox.Size = new System.Drawing.Size(249, 31);
             this.Address_1TextBox.TabIndex = 9;
+            this.Address_1TextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // Address_2TextBox
             // 
@@ -233,6 +237,7 @@ namespace RebateForm
             this.Address_2TextBox.Name = "Address_2TextBox";
             this.Address_2TextBox.Size = new System.Drawing.Size(249, 31);
             this.Address_2TextBox.TabIndex = 10;
+            this.Address_2TextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // CityLabel
             // 
@@ -252,6 +257,7 @@ namespace RebateForm
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(249, 31);
             this.CityTextBox.TabIndex = 12;
+            this.CityTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // StateLabel
             // 
@@ -271,6 +277,7 @@ namespace RebateForm
             this.StateTextBox.Name = "StateTextBox";
             this.StateTextBox.Size = new System.Drawing.Size(249, 31);
             this.StateTextBox.TabIndex = 14;
+            this.StateTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // ZipCodeLabel
             // 
@@ -290,6 +297,7 @@ namespace RebateForm
             this.ZipCodeTextBox.Name = "ZipCodeTextBox";
             this.ZipCodeTextBox.Size = new System.Drawing.Size(249, 31);
             this.ZipCodeTextBox.TabIndex = 16;
+            this.ZipCodeTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // PhoneNumberMaskedTextBox
             // 
@@ -298,6 +306,7 @@ namespace RebateForm
             this.PhoneNumberMaskedTextBox.Name = "PhoneNumberMaskedTextBox";
             this.PhoneNumberMaskedTextBox.Size = new System.Drawing.Size(249, 31);
             this.PhoneNumberMaskedTextBox.TabIndex = 20;
+            this.PhoneNumberMaskedTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // PhoneNumberLabel
             // 
@@ -326,6 +335,7 @@ namespace RebateForm
             this.EmailIdTextBox.Name = "EmailIdTextBox";
             this.EmailIdTextBox.Size = new System.Drawing.Size(249, 31);
             this.EmailIdTextBox.TabIndex = 23;
+            this.EmailIdTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // DateReceivedLabel
             // 
@@ -344,6 +354,7 @@ namespace RebateForm
             this.DateReceivedTimePicker.Name = "DateReceivedTimePicker";
             this.DateReceivedTimePicker.Size = new System.Drawing.Size(249, 31);
             this.DateReceivedTimePicker.TabIndex = 28;
+            this.DateReceivedTimePicker.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // AddButton
             // 
@@ -397,6 +408,7 @@ namespace RebateForm
             this.genderTextBox.Name = "genderTextBox";
             this.genderTextBox.Size = new System.Drawing.Size(249, 31);
             this.genderTextBox.TabIndex = 37;
+            this.genderTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // label1
             // 
@@ -416,6 +428,7 @@ namespace RebateForm
             this.proofOfPurchaseTextBox.Name = "proofOfPurchaseTextBox";
             this.proofOfPurchaseTextBox.Size = new System.Drawing.Size(249, 31);
             this.proofOfPurchaseTextBox.TabIndex = 39;
+            this.proofOfPurchaseTextBox.Leave += new System.EventHandler(this.FnameTextBox_Leave);
             // 
             // dataEntryTableLayoutPanel
             // 

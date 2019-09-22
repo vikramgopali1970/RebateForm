@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace RebateForm
 {
-    public partial class RebateForm
-    {
+    class FileOperations
+    { 
+
         private const String datafile = "CS6326Asg2.txt";
+
+        public FileOperations() { }
 
         private void CheckOrCreateFile()
         {
@@ -20,12 +23,12 @@ namespace RebateForm
         }
 
 
-        private void WriteToFile()
+        public void WriteToFile(Dictionary<int, Record> Data)
         {
             String delimiter = "\t";
             using (var writer = new StreamWriter(datafile))
             {
-                foreach (KeyValuePair<int, Record> item in this.Data)
+                foreach (KeyValuePair<int, Record> item in Data)
                 {
                     Record rc = item.Value;
                     var line = string.Join(delimiter, rc.ToArray());
@@ -34,10 +37,11 @@ namespace RebateForm
             }
         }
 
-        private void LoadFileData()
+        public Dictionary<int, Record> LoadFileData()
         {
             int count = 0;
             CheckOrCreateFile();
+            Dictionary<int, Record> Data = new Dictionary<int, Record>();
             String[] dataVals = File.ReadAllLines(datafile);
             foreach (String data in dataVals)
             {
@@ -46,10 +50,9 @@ namespace RebateForm
                     vals[6], vals[7], vals[8], vals[9], vals[10], vals[11],
                     Convert.ToDateTime(vals[12]), Convert.ToDateTime(vals[13]),
                     Convert.ToDateTime(vals[14]), Convert.ToInt32(vals[15]));
-                this.Data.Add(count, rc);
-                this.Set.Add(rc);
-                this.AddItemToList(rc, count++);
+                Data.Add(count++, rc);
             }
+            return Data;
         }
 
     }

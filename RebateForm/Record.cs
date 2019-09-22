@@ -37,6 +37,7 @@ namespace RebateForm
             string state, string zipCode, String gender, string phNumber, string emailId, String proofOfPurchraseAttached, 
             DateTime dateReceived, DateTime firstCharEntered, DateTime savedRecord, int backSpaceUsed)
         {
+            Console.WriteLine("onsode construction " + zipCode);
             this.fname = fname;
             this.Mname = mname;
             this.lname = lname;
@@ -88,10 +89,11 @@ namespace RebateForm
             {
                 errors.Add("Zipcode cannot be Blank.");
             }
-            if (this.zipCode.Length != 5 || this.zipCode.Length != 9)
-            {
-                errors.Add("Zipcode is invalid.");
-            }
+            Console.WriteLine(this.zipCode.Length+" "+ this.zipCode+" inside record va;lid");
+            //if (this.zipCode.Length != 5 && this.zipCode.Length != 9)
+            //{
+            //    errors.Add("Zipcode is invalid.");
+            //}
             if (this.phNumber.Length < 10)
             {
                 errors.Add("Enter valid Phone Number.");
@@ -100,6 +102,7 @@ namespace RebateForm
             {
                 errors.Add("Email id cannot be Blank.");
             }
+            Console.WriteLine(this.proofOfPurchraseAttached);  
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(this.emailId);
             if (!match.Success)

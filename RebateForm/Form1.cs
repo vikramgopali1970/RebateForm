@@ -21,6 +21,7 @@ namespace RebateForm
         Boolean modify;
         int tag;
         int index;
+        FileOperations fs;
         public RebateForm()
         {
             this.Data = new Dictionary<int, Record>();
@@ -29,14 +30,24 @@ namespace RebateForm
             this.modify = false;
             this.tag = -1;
             this.index = -1;
+            this.fs = new FileOperations();
             InitializeComponent();
-            LoadFileData();
+            LoadData();
+            
         }
 
-        
+        private void LoadData()
+        {
+            this.Data = this.fs.LoadFileData();
+            foreach(int i in this.Data.Keys){
+                this.Set.Add(this.Data[i]);
+                this.AddItemToList(this.Data[i], i);
+            }
+        }
+
         private void RebateForm_Load(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1280;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 800f;
             SizeF scale = new SizeF(widthRatio, heightRatio);
@@ -56,6 +67,8 @@ namespace RebateForm
         {
             Record rc = GetFieldDetails();
             ArrayList errors = rc.IsValid();
+            Console.WriteLine(rc+" "+errors.Count);
+            Console.WriteLine(rc.ZipCode.Length);
             if(this.add && !this.modify)
             {
                 // ADD
@@ -77,7 +90,11 @@ namespace RebateForm
                 }
                 if (errors.Count > 0)
                 {
-                    Console.WriteLine(errors);
+                    foreach(String s in errors)
+                    {
+                        Console.WriteLine(s);
+                    }
+                    
                 }
             }
             else if( this.modify && !this.add)
@@ -119,7 +136,7 @@ namespace RebateForm
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.WriteToFile();
+            this.fs.WriteToFile(this.Data);
             this.stripStatusLabel.Text = "Data saved to File";
         }
 
@@ -142,10 +159,8 @@ namespace RebateForm
         {
             this.Close();
         }
-
-        private void RebateForm_KeyPress(object sender, KeyPressEventArgs e)
+        private void EnableAdd()
         {
-            Console.WriteLine(e.KeyChar);
             if (this.EnableAddButton())
             {
                 this.AddButton.Enabled = true;
@@ -154,7 +169,13 @@ namespace RebateForm
             {
                 this.AddButton.Enabled = false;
             }
-            
+        }
+
+
+        private void RebateForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Console.WriteLine(e.KeyChar);
+
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -162,6 +183,11 @@ namespace RebateForm
             this.ClearFields(this.dataEntryTableLayoutPanel.Controls.OfType<TextBox>());
             this.AddButton.Enabled = false;
             this.stripStatusLabel.Text = "Add Mode";
+        }
+
+        private void FnameTextBox_Leave(object sender, EventArgs e)
+        {
+            EnableAdd();
         }
     }
 }
