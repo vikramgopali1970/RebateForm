@@ -70,21 +70,21 @@ namespace RebateForm
             this.genderTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.proofOfPurchaseTextBox = new System.Windows.Forms.TextBox();
-            this.dataEntryTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.dataButtonsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.stateButtonsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.stripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.dataEntryTableLayoutPanel.SuspendLayout();
-            this.dataButtonsTableLayoutPanel.SuspendLayout();
-            this.listViewTableLayoutPanel.SuspendLayout();
-            this.stateButtonsTableLayoutPanel.SuspendLayout();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.statusStrip.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // viewPortListView
@@ -417,109 +417,109 @@ namespace RebateForm
             this.proofOfPurchaseTextBox.Size = new System.Drawing.Size(249, 31);
             this.proofOfPurchaseTextBox.TabIndex = 39;
             // 
-            // dataEntryTableLayoutPanel
+            // tableLayoutPanel1
             // 
-            this.dataEntryTableLayoutPanel.ColumnCount = 3;
-            this.dataEntryTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.33433F));
-            this.dataEntryTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.33433F));
-            this.dataEntryTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33133F));
-            this.dataEntryTableLayoutPanel.Controls.Add(this.dataButtonsTableLayoutPanel, 1, 14);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.FnameLabel, 0, 1);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.FnameTextBox, 1, 1);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.proofOfPurchaseTextBox, 1, 12);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.MnameLabel, 0, 2);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.label1, 0, 12);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.MnameTextBox, 1, 2);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.genderTextBox, 1, 9);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.DateReceivedTimePicker, 1, 13);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.LnameLabel, 0, 3);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.genderLabel, 0, 9);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.LnameTextBox, 1, 3);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.DateReceivedLabel, 0, 13);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.Address_1Label, 0, 4);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.Address_1TextBox, 1, 4);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.Address_2Label, 0, 5);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.EmailIdTextBox, 1, 11);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.Address_2TextBox, 1, 5);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.EmailIdLabel, 0, 11);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.CityTextBox, 1, 6);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.PhoneNumberMaskedTextBox, 1, 10);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.PhoneNumberLabel, 0, 10);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.CityLabel, 0, 6);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.StateLabel, 0, 7);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.StateTextBox, 1, 7);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.ZipCodeLabel, 0, 8);
-            this.dataEntryTableLayoutPanel.Controls.Add(this.ZipCodeTextBox, 1, 8);
-            this.dataEntryTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataEntryTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
-            this.dataEntryTableLayoutPanel.Name = "dataEntryTableLayoutPanel";
-            this.dataEntryTableLayoutPanel.RowCount = 15;
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872617F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
-            this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.783376F));
-            this.dataEntryTableLayoutPanel.Size = new System.Drawing.Size(590, 811);
-            this.dataEntryTableLayoutPanel.TabIndex = 41;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.33433F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.33433F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33133F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 14);
+            this.tableLayoutPanel1.Controls.Add(this.FnameLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.FnameTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.proofOfPurchaseTextBox, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.MnameLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.MnameTextBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.genderTextBox, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.DateReceivedTimePicker, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.LnameLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.genderLabel, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.LnameTextBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.DateReceivedLabel, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.Address_1Label, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Address_1TextBox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Address_2Label, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EmailIdTextBox, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.Address_2TextBox, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.EmailIdLabel, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.CityTextBox, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PhoneNumberMaskedTextBox, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PhoneNumberLabel, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.CityLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.StateLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.StateTextBox, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.ZipCodeLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.ZipCodeTextBox, 1, 8);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 15;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872617F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.783376F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(590, 811);
+            this.tableLayoutPanel1.TabIndex = 41;
             // 
-            // dataButtonsTableLayoutPanel
+            // tableLayoutPanel3
             // 
-            this.dataButtonsTableLayoutPanel.ColumnCount = 3;
-            this.dataButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.dataButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.dataButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.dataButtonsTableLayoutPanel.Controls.Add(this.DeleteButton, 1, 0);
-            this.dataButtonsTableLayoutPanel.Controls.Add(this.ClearButton, 2, 0);
-            this.dataButtonsTableLayoutPanel.Controls.Add(this.AddButton, 0, 0);
-            this.dataButtonsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataButtonsTableLayoutPanel.Location = new System.Drawing.Point(258, 773);
-            this.dataButtonsTableLayoutPanel.Name = "dataButtonsTableLayoutPanel";
-            this.dataButtonsTableLayoutPanel.RowCount = 1;
-            this.dataButtonsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dataButtonsTableLayoutPanel.Size = new System.Drawing.Size(249, 35);
-            this.dataButtonsTableLayoutPanel.TabIndex = 43;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.DeleteButton, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ClearButton, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.AddButton, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(258, 773);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(249, 35);
+            this.tableLayoutPanel3.TabIndex = 43;
             // 
-            // listViewTableLayoutPanel
+            // tableLayoutPanel2
             // 
-            this.listViewTableLayoutPanel.ColumnCount = 1;
-            this.listViewTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.listViewTableLayoutPanel.Controls.Add(this.stateButtonsTableLayoutPanel, 0, 2);
-            this.listViewTableLayoutPanel.Controls.Add(this.viewPortListView, 0, 1);
-            this.listViewTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewTableLayoutPanel.Location = new System.Drawing.Point(599, 3);
-            this.listViewTableLayoutPanel.Name = "listViewTableLayoutPanel";
-            this.listViewTableLayoutPanel.RowCount = 3;
-            this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
-            this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.listViewTableLayoutPanel.Size = new System.Drawing.Size(590, 811);
-            this.listViewTableLayoutPanel.TabIndex = 42;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.viewPortListView, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(599, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(590, 811);
+            this.tableLayoutPanel2.TabIndex = 42;
             // 
-            // stateButtonsTableLayoutPanel
+            // tableLayoutPanel5
             // 
-            this.stateButtonsTableLayoutPanel.ColumnCount = 3;
-            this.stateButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.stateButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.stateButtonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.stateButtonsTableLayoutPanel.Controls.Add(this.saveButton, 1, 0);
-            this.stateButtonsTableLayoutPanel.Controls.Add(this.cancelButton, 2, 0);
-            this.stateButtonsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stateButtonsTableLayoutPanel.Location = new System.Drawing.Point(3, 772);
-            this.stateButtonsTableLayoutPanel.Name = "stateButtonsTableLayoutPanel";
-            this.stateButtonsTableLayoutPanel.RowCount = 1;
-            this.stateButtonsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.stateButtonsTableLayoutPanel.Size = new System.Drawing.Size(584, 36);
-            this.stateButtonsTableLayoutPanel.TabIndex = 44;
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.saveButton, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cancelButton, 2, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 772);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(584, 36);
+            this.tableLayoutPanel5.TabIndex = 44;
             // 
             // saveButton
             // 
@@ -548,8 +548,8 @@ namespace RebateForm
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.dataEntryTableLayoutPanel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.listViewTableLayoutPanel, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -564,17 +564,17 @@ namespace RebateForm
             this.stripStatusLabel.Size = new System.Drawing.Size(127, 32);
             this.stripStatusLabel.Text = "Add mode";
             // 
-            // statusStrip
+            // statusStrip1
             // 
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripStatusLabel});
-            this.statusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStrip.Location = new System.Drawing.Point(0, 817);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1192, 42);
-            this.statusStrip.TabIndex = 40;
-            this.statusStrip.Text = "statusStrip1";
+            this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.statusStrip1.Location = new System.Drawing.Point(0, 817);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1192, 42);
+            this.statusStrip1.TabIndex = 40;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // RebateForm
             // 
@@ -582,20 +582,21 @@ namespace RebateForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 859);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.statusStrip1);
             this.KeyPreview = true;
             this.Name = "RebateForm";
             this.Text = "Rebate Form";
             this.Load += new System.EventHandler(this.RebateForm_Load);
+            this.SizeChanged += new System.EventHandler(this.RebateForm_SizeChanged);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RebateForm_KeyPress);
-            this.dataEntryTableLayoutPanel.ResumeLayout(false);
-            this.dataEntryTableLayoutPanel.PerformLayout();
-            this.dataButtonsTableLayoutPanel.ResumeLayout(false);
-            this.listViewTableLayoutPanel.ResumeLayout(false);
-            this.stateButtonsTableLayoutPanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,15 +643,15 @@ namespace RebateForm
         private System.Windows.Forms.TextBox genderTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox proofOfPurchaseTextBox;
-        private System.Windows.Forms.TableLayoutPanel dataEntryTableLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel listViewTableLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel dataButtonsTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.TableLayoutPanel stateButtonsTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.ToolStripStatusLabel stripStatusLabel;
-        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 

@@ -71,8 +71,10 @@ namespace RebateForm
         {
             foreach (TextBox element in elements)
             {
+                Console.WriteLine("here for " + element.Name);
                 element.Clear();
             }
+            this.PhoneNumberMaskedTextBox.Clear();
             this.DisableModifyMode();
         }
 

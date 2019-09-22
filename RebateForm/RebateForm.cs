@@ -15,18 +15,24 @@ namespace RebateForm
     public partial class RebateForm : Form
     {
         
-        private Dictionary<int, Record> Data;
+        protected Dictionary<int, Record> Data;
         HashSet<Record> Set;
         Boolean add;
         Boolean modify;
         int tag;
         int index;
+
+        internal Dictionary<int, Record> Data1 { get => Data; set => Data = value; }
+        internal HashSet<Record> Set1 { get => Set; set => Set = value; }
+        public bool Add { get => add; set => add = value; }
+        public bool Modify { get => modify; set => modify = value; }
+
         public RebateForm()
         {
-            this.Data = new Dictionary<int, Record>();
-            this.Set = new HashSet<Record>();
-            this.add = true;
-            this.modify = false;
+            this.Data1 = new Dictionary<int, Record>();
+            this.Set1 = new HashSet<Record>();
+            this.Add = true;
+            this.Modify = false;
             this.tag = -1;
             this.index = -1;
             InitializeComponent();
@@ -36,7 +42,7 @@ namespace RebateForm
         
         private void RebateForm_Load(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1280;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 800f;
             SizeF scale = new SizeF(widthRatio, heightRatio);
@@ -56,16 +62,16 @@ namespace RebateForm
         {
             Record rc = GetFieldDetails();
             ArrayList errors = rc.IsValid();
-            if(this.add && !this.modify)
+            if(this.Add && !this.Modify)
             {
                 // ADD
                 if (errors.Count == 0)
                 {
-                    int count = this.Data.Count + 1;
-                    if (!this.Set.Contains(rc))
+                    int count = this.Data1.Count + 1;
+                    if (!this.Set1.Contains(rc))
                     {
-                        this.Data.Add(count, rc);
-                        this.Set.Add(rc);
+                        this.Data1.Add(count, rc);
+                        this.Set1.Add(rc);
                         this.AddItemToList(rc, count++);
                         this.ClearFields(this.Controls.OfType<TextBox>());
                         this.stripStatusLabel.Text = "Record added successfully";
@@ -80,15 +86,15 @@ namespace RebateForm
                     Console.WriteLine(errors);
                 }
             }
-            else if( this.modify && !this.add)
+            else if( this.Modify && !this.Add)
             {
                 // MODIFY
-                if (!this.Set.Contains(rc))
+                if (!this.Set1.Contains(rc))
                 {
-                    this.Set.Add(rc);
-                    Record old_rc = this.Data[this.tag];
-                    this.Set.Add(old_rc);
-                    this.Data[this.tag] = rc;
+                    this.Set1.Add(rc);
+                    Record old_rc = this.Data1[this.tag];
+                    this.Set1.Add(old_rc);
+                    this.Data1[this.tag] = rc;
                     ListViewItem item = new ListViewItem(new[] { rc.Fname, rc.Lname, rc.PhNumber });
                     item.Tag = this.tag;
                     this.viewPortListView.Items[this.index]=item;
@@ -104,22 +110,28 @@ namespace RebateForm
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if(this.index >= 0 && this.tag >= 0 && this.modify && !this.add)
+            if(this.index >= 0 && this.tag >= 0 && this.Modify && !this.Add)
             {
                 this.viewPortListView.Items.RemoveAt(this.index);
-                Record rc = this.Data[this.tag];
-                this.Data.Remove(this.tag);
-                this.Set.Remove(rc);
+                Record rc = this.Data1[this.tag];
+                this.Data1.Remove(this.tag);
+                this.Set1.Remove(rc);
                 this.ClearFields(this.Controls.OfType<TextBox>());
                 this.stripStatusLabel.Text = "Deleted the Record";
             }
 
         }
 
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            this.ClearFields(this.Controls.OfType<TextBox>());
+            this.AddButton.Enabled = false;
+            this.stripStatusLabel.Text = "Add Mode";
+        }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            this.WriteToFile();
+            WriteToFile();
             this.stripStatusLabel.Text = "Data saved to File";
         }
 
@@ -129,7 +141,7 @@ namespace RebateForm
             foreach (ListViewItem item in selected)
             {
                 int key = (int)this.viewPortListView.SelectedItems[0].Tag;
-                PopulateFields(this.Data[key]);
+                PopulateFields(this.Data1[key]);
                 int index = this.viewPortListView.Items.IndexOf(this.viewPortListView.SelectedItems[0]);
                 this.EnableModifyMode(key, index);
                 this.stripStatusLabel.Text = "Modify Mode";
@@ -155,13 +167,6 @@ namespace RebateForm
                 this.AddButton.Enabled = false;
             }
             
-        }
-
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            this.ClearFields(this.dataEntryTableLayoutPanel.Controls.OfType<TextBox>());
-            this.AddButton.Enabled = false;
-            this.stripStatusLabel.Text = "Add Mode";
         }
     }
 }
