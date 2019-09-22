@@ -36,7 +36,20 @@ namespace RebateForm
         
         private void RebateForm_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1280;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 800f;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
 
+            foreach (Control control in this.Controls)
+            {
+                Point pt = control.Location;
+                pt.Y += (int)heightRatio;
+                control.Location = pt;
+                control.Font = new Font("Verdana", control.Font.SizeInPoints * heightRatio * widthRatio);
+            }
+            this.CenterToScreen();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
