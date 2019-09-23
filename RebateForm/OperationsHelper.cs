@@ -25,26 +25,10 @@ namespace RebateForm
             String state = StateTextBox.Text.Trim();
             String zipCode = ZipCodeTextBox.Text.Trim();
             Console.WriteLine("here in setting rc "+zipCode + " " + zipCode.Length);
-            String gender = "-";
-            if (this.genderTextBox.Text.Equals('Y'))
-            {
-                gender = "YES";
-            }
-            else
-            {
-                gender = "NO";
-            }
+            String gender = genderTextBox.Text;
             String phNumber = PhoneNumberMaskedTextBox.Text.Trim();
             String email = EmailIdTextBox.Text.Trim();
-            String proofOfPurchraseAttached = "-";
-            if(this.proofOfPurchaseTextBox.Text == 'Y'.ToString())
-            {
-                proofOfPurchraseAttached = "YES";
-            }
-            else if(this.proofOfPurchaseTextBox.Text == 'N'.ToString())
-            {
-                proofOfPurchraseAttached = "NO";
-            }
+            String proofOfPurchraseAttached = proofOfPurchaseTextBox.Text;
             DateTime dateReceived = DateReceivedTimePicker.Value;
             Record rc = new Record(fname, mname, lname, address_1, address_2, city, state, zipCode, gender, phNumber, email, proofOfPurchraseAttached,
                 dateReceived, dateReceived, dateReceived, 0);
@@ -54,7 +38,7 @@ namespace RebateForm
         private void PopulateFields(Record rc)
         {
             this.FnameTextBox.Text = rc.Fname;
-            this.MnameTextBox.Text = rc.Mname.ToString();
+            this.MnameTextBox.Text = rc.Mname;
             this.LnameTextBox.Text = rc.Lname;
             this.Address_1TextBox.Text = rc.Address_1;
             this.Address_2TextBox.Text = rc.Address_2;
@@ -64,7 +48,7 @@ namespace RebateForm
             this.genderTextBox.Text = rc.Gender;
             this.PhoneNumberMaskedTextBox.Text = rc.PhNumber;
             this.EmailIdTextBox.Text = rc.EmailId;
-            this.proofOfPurchaseTextBox.Text = rc.ProofOfPurchraseAttached.Substring(0, 1);
+            this.proofOfPurchaseTextBox.Text = rc.ProofOfPurchraseAttached;
             this.DateReceivedTimePicker.Value = rc.DateReceived;
         }
 
@@ -123,19 +107,6 @@ namespace RebateForm
                 this.PhoneNumberMaskedTextBox.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             }
             return true;
-        }
-
-        private void ExpandScreen(Control c)
-        {
-            int iHeight = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
-            this.Height += iHeight;
-            this.viewPortListView.Height += iHeight;
-            this.saveButton.Height += iHeight;
-            int iWidth = Screen.PrimaryScreen.WorkingArea.Width - this.Width;
-            this.viewPortListView.Width += iWidth;
-            //this.saveButton.Width += iWidth;
-            this.Width += iWidth;
-            this.CenterToScreen();
         }
     }
 }

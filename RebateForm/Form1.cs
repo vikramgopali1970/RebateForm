@@ -80,7 +80,7 @@ namespace RebateForm
                         this.Data.Add(count, rc);
                         this.Set.Add(rc);
                         this.AddItemToList(rc, count++);
-                        this.ClearFields(this.Controls.OfType<TextBox>());
+                        this.ClearFields(this.dataEntryTableLayoutPanel.Controls.OfType<TextBox>());
                         this.stripStatusLabel.Text = "Record added successfully";
                     }
                     else
@@ -100,17 +100,23 @@ namespace RebateForm
             else if( this.modify && !this.add)
             {
                 // MODIFY
-                if (!this.Set.Contains(rc))
-                {
-                    this.Set.Add(rc);
-                    Record old_rc = this.Data[this.tag];
-                    this.Set.Add(old_rc);
-                    this.Data[this.tag] = rc;
-                    ListViewItem item = new ListViewItem(new[] { rc.Fname, rc.Lname, rc.PhNumber });
-                    item.Tag = this.tag;
-                    this.viewPortListView.Items[this.index]=item;
-                    this.ClearFields(this.Controls.OfType<TextBox>());
-                    this.stripStatusLabel.Text = "Record modified successfully";
+                Record oldRc = this.Data[this.tag];
+                if (errors.Count == 0) {
+                    this.Set.Remove(oldRc);
+                    if (!this.Set.Contains(rc))
+                    {
+                        this.Set.Add(rc);
+                        this.Data[this.tag] = rc;
+                        ListViewItem item = new ListViewItem(new[] { rc.Fname, rc.Lname, rc.PhNumber });
+                        item.Tag = this.tag;
+                        this.viewPortListView.Items[this.index] = item;
+                        this.ClearFields(this.dataEntryTableLayoutPanel.Controls.OfType<TextBox>());
+                        this.stripStatusLabel.Text = "Record modified successfully";
+                    }
+                    else
+                    {
+                        this.Set.Add(oldRc);
+                    }
                 }
             }
             else
@@ -127,7 +133,7 @@ namespace RebateForm
                 Record rc = this.Data[this.tag];
                 this.Data.Remove(this.tag);
                 this.Set.Remove(rc);
-                this.ClearFields(this.Controls.OfType<TextBox>());
+                this.ClearFields(this.dataEntryTableLayoutPanel.Controls.OfType<TextBox>());
                 this.stripStatusLabel.Text = "Deleted the Record";
             }
 

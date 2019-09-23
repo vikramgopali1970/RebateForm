@@ -174,6 +174,7 @@ namespace RebateForm
             // 
             this.MnameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MnameTextBox.Location = new System.Drawing.Point(258, 113);
+            this.MnameTextBox.MaxLength = 1;
             this.MnameTextBox.Name = "MnameTextBox";
             this.MnameTextBox.Size = new System.Drawing.Size(249, 31);
             this.MnameTextBox.TabIndex = 3;
