@@ -14,13 +14,15 @@ namespace RebateForm
 {
     public partial class RebateForm : Form
     {
-        
+        int backSpace = 0;
         private Dictionary<int, Record> Data;
         HashSet<Record> Set;
         Boolean add;
         Boolean modify;
         int tag;
         int index;
+        String startTime = "";
+        String endTime = "";
         FileOperations fs;
         public RebateForm()
         {
@@ -77,6 +79,10 @@ namespace RebateForm
                     int count = this.Data.Count + 1;
                     if (!this.Set.Contains(rc))
                     {
+                        endTime = DateTime.Now.ToString();
+                        rc.FirstCharEntered = Convert.ToDateTime(startTime);
+                        rc.SavedRecord = Convert.ToDateTime(endTime);
+                        rc.BackSpaceUsed = backSpace;
                         this.Data.Add(count, rc);
                         this.Set.Add(rc);
                         this.AddItemToList(rc, count++);
@@ -142,6 +148,7 @@ namespace RebateForm
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            
             this.fs.WriteToFile(this.Data);
             this.stripStatusLabel.Text = "Data saved to File";
         }
@@ -180,7 +187,11 @@ namespace RebateForm
 
         private void RebateForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if(e.KeyChar == (char)Keys.Back)
+            {
+                Console.WriteLine("pressed");
+                backSpace++;
+            }
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -248,6 +259,7 @@ namespace RebateForm
 
         private void FnameTextBox_TextChanged(object sender, EventArgs e)
         {
+            startTime = DateTime.Now.ToString();
             EnableAdd();
         }
 
