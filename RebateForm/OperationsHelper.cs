@@ -104,13 +104,23 @@ namespace RebateForm
 
         private Boolean EnableAddButton()
         {
-            if(this.FnameTextBox.Text.Length == 0 || this.LnameTextBox.Text.Length == 0 || this.Address_1TextBox.Text.Length == 0 ||
+            if (this.FnameTextBox.Text.Length == 0 || this.LnameTextBox.Text.Length == 0 || this.Address_1TextBox.Text.Length == 0 ||
                this.CityTextBox.Text.Length == 0 || this.StateTextBox.Text.Length == 0 || this.ZipCodeTextBox.Text.Length == 0 || 
-                    this.genderTextBox.Text.Length == 0 || this.PhoneNumberMaskedTextBox.Text.Length != 10 || this.EmailIdTextBox.Text.Length == 0 ||
+                    this.genderTextBox.Text.Length == 0 || this.EmailIdTextBox.Text.Length == 0 ||
                     this.proofOfPurchaseTextBox.Text.Length == 0 || this.DateReceivedTimePicker.Value < new DateTime().Date)
             {
-                Console.WriteLine(this.PhoneNumberMaskedTextBox.Text.Length);
+                Console.WriteLine("failed all");
                 return false;
+            }
+            if (this.PhoneNumberMaskedTextBox.MaskFull)
+            {
+                this.PhoneNumberMaskedTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                if(this.PhoneNumberMaskedTextBox.Text.Length != 10)
+                {
+                    Console.WriteLine("failed phonenumber");
+                    return false;
+                }
+                this.PhoneNumberMaskedTextBox.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             }
             return true;
         }

@@ -174,7 +174,6 @@ namespace RebateForm
 
         private void RebateForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Console.WriteLine(e.KeyChar);
 
         }
 
@@ -185,9 +184,71 @@ namespace RebateForm
             this.stripStatusLabel.Text = "Add Mode";
         }
 
-        private void FnameTextBox_Leave(object sender, EventArgs e)
+        private void DateReceivedTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MnameTextBox_TextChanged(object sender, EventArgs e)
         {
             EnableAdd();
+        }
+
+        private void LnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void Address_1TextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void Address_2TextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void CityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void StateTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void ZipCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void GenderTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+
+        }
+
+        private void EmailIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void ProofOfPurchaseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void FnameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            EnableAdd();
+        }
+
+        private void PhoneNumberMaskedTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            EnableAdd();
+            
         }
     }
 }
