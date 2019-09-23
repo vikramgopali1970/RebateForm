@@ -96,9 +96,10 @@ namespace RebateForm
             this.viewPortListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewPortListView.FullRowSelect = true;
             this.viewPortListView.HideSelection = false;
-            this.viewPortListView.Location = new System.Drawing.Point(3, 59);
+            this.viewPortListView.Location = new System.Drawing.Point(2, 31);
+            this.viewPortListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.viewPortListView.Name = "viewPortListView";
-            this.viewPortListView.Size = new System.Drawing.Size(584, 707);
+            this.viewPortListView.Size = new System.Drawing.Size(285, 366);
             this.viewPortListView.TabIndex = 4;
             this.viewPortListView.UseCompatibleStateImageBehavior = false;
             this.viewPortListView.View = System.Windows.Forms.View.Details;
@@ -144,9 +145,10 @@ namespace RebateForm
             // 
             this.FnameLabel.AutoSize = true;
             this.FnameLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.FnameLabel.Location = new System.Drawing.Point(136, 55);
+            this.FnameLabel.Location = new System.Drawing.Point(66, 28);
+            this.FnameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FnameLabel.Name = "FnameLabel";
-            this.FnameLabel.Size = new System.Drawing.Size(116, 55);
+            this.FnameLabel.Size = new System.Drawing.Size(57, 28);
             this.FnameLabel.TabIndex = 0;
             this.FnameLabel.Text = "First Name";
             // 
@@ -154,59 +156,65 @@ namespace RebateForm
             // 
             this.MnameLabel.AutoSize = true;
             this.MnameLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MnameLabel.Location = new System.Drawing.Point(114, 110);
+            this.MnameLabel.Location = new System.Drawing.Point(54, 56);
+            this.MnameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MnameLabel.Name = "MnameLabel";
-            this.MnameLabel.Size = new System.Drawing.Size(138, 55);
+            this.MnameLabel.Size = new System.Drawing.Size(69, 28);
             this.MnameLabel.TabIndex = 1;
             this.MnameLabel.Text = "Middle Name";
             // 
             // FnameTextBox
             // 
             this.FnameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FnameTextBox.Location = new System.Drawing.Point(258, 58);
+            this.FnameTextBox.Location = new System.Drawing.Point(127, 30);
+            this.FnameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FnameTextBox.MaxLength = 20;
             this.FnameTextBox.Name = "FnameTextBox";
-            this.FnameTextBox.Size = new System.Drawing.Size(249, 31);
-            this.FnameTextBox.TabIndex = 2;
+            this.FnameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.FnameTextBox.TabIndex = 0;
             this.FnameTextBox.TextChanged += new System.EventHandler(this.FnameTextBox_TextChanged);
             // 
             // MnameTextBox
             // 
             this.MnameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MnameTextBox.Location = new System.Drawing.Point(258, 113);
+            this.MnameTextBox.Location = new System.Drawing.Point(127, 58);
+            this.MnameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MnameTextBox.MaxLength = 1;
             this.MnameTextBox.Name = "MnameTextBox";
-            this.MnameTextBox.Size = new System.Drawing.Size(249, 31);
-            this.MnameTextBox.TabIndex = 3;
+            this.MnameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.MnameTextBox.TabIndex = 1;
             this.MnameTextBox.TextChanged += new System.EventHandler(this.MnameTextBox_TextChanged);
             // 
             // LnameLabel
             // 
             this.LnameLabel.AutoSize = true;
             this.LnameLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LnameLabel.Location = new System.Drawing.Point(137, 165);
+            this.LnameLabel.Location = new System.Drawing.Point(65, 84);
+            this.LnameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LnameLabel.Name = "LnameLabel";
-            this.LnameLabel.Size = new System.Drawing.Size(115, 55);
+            this.LnameLabel.Size = new System.Drawing.Size(58, 28);
             this.LnameLabel.TabIndex = 5;
             this.LnameLabel.Text = "Last Name";
             // 
             // LnameTextBox
             // 
             this.LnameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LnameTextBox.Location = new System.Drawing.Point(258, 168);
+            this.LnameTextBox.Location = new System.Drawing.Point(127, 86);
+            this.LnameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LnameTextBox.MaxLength = 20;
             this.LnameTextBox.Name = "LnameTextBox";
-            this.LnameTextBox.Size = new System.Drawing.Size(249, 31);
-            this.LnameTextBox.TabIndex = 6;
+            this.LnameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.LnameTextBox.TabIndex = 2;
             this.LnameTextBox.TextChanged += new System.EventHandler(this.LnameTextBox_TextChanged);
             // 
             // Address_1Label
             // 
             this.Address_1Label.AutoSize = true;
             this.Address_1Label.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Address_1Label.Location = new System.Drawing.Point(103, 220);
+            this.Address_1Label.Location = new System.Drawing.Point(50, 112);
+            this.Address_1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address_1Label.Name = "Address_1Label";
-            this.Address_1Label.Size = new System.Drawing.Size(149, 55);
+            this.Address_1Label.Size = new System.Drawing.Size(73, 28);
             this.Address_1Label.TabIndex = 7;
             this.Address_1Label.Text = "Address line 1";
             // 
@@ -214,109 +222,120 @@ namespace RebateForm
             // 
             this.Address_2Label.AutoSize = true;
             this.Address_2Label.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Address_2Label.Location = new System.Drawing.Point(103, 275);
+            this.Address_2Label.Location = new System.Drawing.Point(50, 140);
+            this.Address_2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Address_2Label.Name = "Address_2Label";
-            this.Address_2Label.Size = new System.Drawing.Size(149, 55);
+            this.Address_2Label.Size = new System.Drawing.Size(73, 28);
             this.Address_2Label.TabIndex = 8;
             this.Address_2Label.Text = "Address line 2";
             // 
             // Address_1TextBox
             // 
             this.Address_1TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Address_1TextBox.Location = new System.Drawing.Point(258, 223);
+            this.Address_1TextBox.Location = new System.Drawing.Point(127, 114);
+            this.Address_1TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Address_1TextBox.MaxLength = 35;
             this.Address_1TextBox.Name = "Address_1TextBox";
-            this.Address_1TextBox.Size = new System.Drawing.Size(249, 31);
-            this.Address_1TextBox.TabIndex = 9;
+            this.Address_1TextBox.Size = new System.Drawing.Size(121, 20);
+            this.Address_1TextBox.TabIndex = 3;
             this.Address_1TextBox.TextChanged += new System.EventHandler(this.Address_1TextBox_TextChanged);
             // 
             // Address_2TextBox
             // 
             this.Address_2TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Address_2TextBox.Location = new System.Drawing.Point(258, 278);
+            this.Address_2TextBox.Location = new System.Drawing.Point(127, 142);
+            this.Address_2TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Address_2TextBox.MaxLength = 35;
             this.Address_2TextBox.Name = "Address_2TextBox";
-            this.Address_2TextBox.Size = new System.Drawing.Size(249, 31);
-            this.Address_2TextBox.TabIndex = 10;
+            this.Address_2TextBox.Size = new System.Drawing.Size(121, 20);
+            this.Address_2TextBox.TabIndex = 4;
             this.Address_2TextBox.TextChanged += new System.EventHandler(this.Address_2TextBox_TextChanged);
             // 
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CityLabel.Location = new System.Drawing.Point(203, 330);
+            this.CityLabel.Location = new System.Drawing.Point(99, 168);
+            this.CityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CityLabel.Name = "CityLabel";
-            this.CityLabel.Size = new System.Drawing.Size(49, 55);
+            this.CityLabel.Size = new System.Drawing.Size(24, 28);
             this.CityLabel.TabIndex = 11;
             this.CityLabel.Text = "City";
             // 
             // CityTextBox
             // 
             this.CityTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CityTextBox.Location = new System.Drawing.Point(258, 333);
+            this.CityTextBox.Location = new System.Drawing.Point(127, 170);
+            this.CityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CityTextBox.MaxLength = 25;
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(249, 31);
-            this.CityTextBox.TabIndex = 12;
+            this.CityTextBox.Size = new System.Drawing.Size(121, 20);
+            this.CityTextBox.TabIndex = 5;
             this.CityTextBox.TextChanged += new System.EventHandler(this.CityTextBox_TextChanged);
             // 
             // StateLabel
             // 
             this.StateLabel.AutoSize = true;
             this.StateLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.StateLabel.Location = new System.Drawing.Point(190, 385);
+            this.StateLabel.Location = new System.Drawing.Point(91, 196);
+            this.StateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StateLabel.Name = "StateLabel";
-            this.StateLabel.Size = new System.Drawing.Size(62, 55);
+            this.StateLabel.Size = new System.Drawing.Size(32, 28);
             this.StateLabel.TabIndex = 13;
             this.StateLabel.Text = "State";
             // 
             // StateTextBox
             // 
             this.StateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StateTextBox.Location = new System.Drawing.Point(258, 388);
+            this.StateTextBox.Location = new System.Drawing.Point(127, 198);
+            this.StateTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StateTextBox.MaxLength = 2;
             this.StateTextBox.Name = "StateTextBox";
-            this.StateTextBox.Size = new System.Drawing.Size(249, 31);
-            this.StateTextBox.TabIndex = 14;
+            this.StateTextBox.Size = new System.Drawing.Size(121, 20);
+            this.StateTextBox.TabIndex = 6;
             this.StateTextBox.TextChanged += new System.EventHandler(this.StateTextBox_TextChanged);
             // 
             // ZipCodeLabel
             // 
             this.ZipCodeLabel.AutoSize = true;
             this.ZipCodeLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ZipCodeLabel.Location = new System.Drawing.Point(153, 440);
+            this.ZipCodeLabel.Location = new System.Drawing.Point(73, 224);
+            this.ZipCodeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ZipCodeLabel.Name = "ZipCodeLabel";
-            this.ZipCodeLabel.Size = new System.Drawing.Size(99, 55);
+            this.ZipCodeLabel.Size = new System.Drawing.Size(50, 28);
             this.ZipCodeLabel.TabIndex = 15;
             this.ZipCodeLabel.Text = "Zip Code";
             // 
             // ZipCodeTextBox
             // 
             this.ZipCodeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ZipCodeTextBox.Location = new System.Drawing.Point(258, 443);
+            this.ZipCodeTextBox.Location = new System.Drawing.Point(127, 226);
+            this.ZipCodeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ZipCodeTextBox.MaxLength = 9;
             this.ZipCodeTextBox.Name = "ZipCodeTextBox";
-            this.ZipCodeTextBox.Size = new System.Drawing.Size(249, 31);
-            this.ZipCodeTextBox.TabIndex = 16;
+            this.ZipCodeTextBox.Size = new System.Drawing.Size(121, 20);
+            this.ZipCodeTextBox.TabIndex = 7;
             this.ZipCodeTextBox.TextChanged += new System.EventHandler(this.ZipCodeTextBox_TextChanged);
             // 
             // PhoneNumberMaskedTextBox
             // 
             this.PhoneNumberMaskedTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhoneNumberMaskedTextBox.Location = new System.Drawing.Point(258, 553);
+            this.PhoneNumberMaskedTextBox.Location = new System.Drawing.Point(127, 282);
+            this.PhoneNumberMaskedTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhoneNumberMaskedTextBox.Mask = "(000)-000-0000";
             this.PhoneNumberMaskedTextBox.Name = "PhoneNumberMaskedTextBox";
-            this.PhoneNumberMaskedTextBox.Size = new System.Drawing.Size(249, 31);
-            this.PhoneNumberMaskedTextBox.TabIndex = 20;
+            this.PhoneNumberMaskedTextBox.Size = new System.Drawing.Size(121, 20);
+            this.PhoneNumberMaskedTextBox.TabIndex = 9;
             this.PhoneNumberMaskedTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PhoneNumberMaskedTextBox_KeyUp);
             // 
             // PhoneNumberLabel
             // 
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(97, 550);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(45, 280);
+            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(155, 55);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(78, 28);
             this.PhoneNumberLabel.TabIndex = 21;
             this.PhoneNumberLabel.Text = "Phone Number";
             // 
@@ -324,48 +343,53 @@ namespace RebateForm
             // 
             this.EmailIdLabel.AutoSize = true;
             this.EmailIdLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.EmailIdLabel.Location = new System.Drawing.Point(102, 605);
+            this.EmailIdLabel.Location = new System.Drawing.Point(50, 308);
+            this.EmailIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailIdLabel.Name = "EmailIdLabel";
-            this.EmailIdLabel.Size = new System.Drawing.Size(150, 55);
+            this.EmailIdLabel.Size = new System.Drawing.Size(73, 28);
             this.EmailIdLabel.TabIndex = 22;
             this.EmailIdLabel.Text = "Email Address";
             // 
             // EmailIdTextBox
             // 
             this.EmailIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmailIdTextBox.Location = new System.Drawing.Point(258, 608);
+            this.EmailIdTextBox.Location = new System.Drawing.Point(127, 310);
+            this.EmailIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmailIdTextBox.Name = "EmailIdTextBox";
-            this.EmailIdTextBox.Size = new System.Drawing.Size(249, 31);
-            this.EmailIdTextBox.TabIndex = 23;
+            this.EmailIdTextBox.Size = new System.Drawing.Size(121, 20);
+            this.EmailIdTextBox.TabIndex = 10;
             this.EmailIdTextBox.TextChanged += new System.EventHandler(this.EmailIdTextBox_TextChanged);
             // 
             // DateReceivedLabel
             // 
             this.DateReceivedLabel.AutoSize = true;
             this.DateReceivedLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.DateReceivedLabel.Location = new System.Drawing.Point(99, 715);
+            this.DateReceivedLabel.Location = new System.Drawing.Point(44, 364);
+            this.DateReceivedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateReceivedLabel.Name = "DateReceivedLabel";
-            this.DateReceivedLabel.Size = new System.Drawing.Size(153, 55);
+            this.DateReceivedLabel.Size = new System.Drawing.Size(79, 28);
             this.DateReceivedLabel.TabIndex = 27;
             this.DateReceivedLabel.Text = "Date Received";
             // 
             // DateReceivedTimePicker
             // 
             this.DateReceivedTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DateReceivedTimePicker.Location = new System.Drawing.Point(258, 718);
+            this.DateReceivedTimePicker.Location = new System.Drawing.Point(127, 366);
+            this.DateReceivedTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DateReceivedTimePicker.Name = "DateReceivedTimePicker";
-            this.DateReceivedTimePicker.Size = new System.Drawing.Size(249, 31);
-            this.DateReceivedTimePicker.TabIndex = 28;
+            this.DateReceivedTimePicker.Size = new System.Drawing.Size(121, 20);
+            this.DateReceivedTimePicker.TabIndex = 12;
             this.DateReceivedTimePicker.ValueChanged += new System.EventHandler(this.DateReceivedTimePicker_ValueChanged);
             // 
             // AddButton
             // 
             this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddButton.Enabled = false;
-            this.AddButton.Location = new System.Drawing.Point(3, 3);
+            this.AddButton.Location = new System.Drawing.Point(2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(77, 29);
-            this.AddButton.TabIndex = 29;
+            this.AddButton.Size = new System.Drawing.Size(36, 21);
+            this.AddButton.TabIndex = 0;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -373,10 +397,11 @@ namespace RebateForm
             // DeleteButton
             // 
             this.DeleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteButton.Location = new System.Drawing.Point(86, 3);
+            this.DeleteButton.Location = new System.Drawing.Point(42, 2);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(77, 29);
-            this.DeleteButton.TabIndex = 30;
+            this.DeleteButton.Size = new System.Drawing.Size(36, 21);
+            this.DeleteButton.TabIndex = 1;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -384,10 +409,11 @@ namespace RebateForm
             // ClearButton
             // 
             this.ClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClearButton.Location = new System.Drawing.Point(169, 3);
+            this.ClearButton.Location = new System.Drawing.Point(82, 2);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(77, 29);
-            this.ClearButton.TabIndex = 31;
+            this.ClearButton.Size = new System.Drawing.Size(37, 21);
+            this.ClearButton.TabIndex = 2;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
@@ -396,40 +422,44 @@ namespace RebateForm
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.genderLabel.Location = new System.Drawing.Point(169, 495);
+            this.genderLabel.Location = new System.Drawing.Point(81, 252);
+            this.genderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(83, 55);
+            this.genderLabel.Size = new System.Drawing.Size(42, 28);
             this.genderLabel.TabIndex = 36;
             this.genderLabel.Text = "Gender";
             // 
             // genderTextBox
             // 
             this.genderTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.genderTextBox.Location = new System.Drawing.Point(258, 498);
+            this.genderTextBox.Location = new System.Drawing.Point(127, 254);
+            this.genderTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genderTextBox.MaxLength = 1;
             this.genderTextBox.Name = "genderTextBox";
-            this.genderTextBox.Size = new System.Drawing.Size(249, 31);
-            this.genderTextBox.TabIndex = 37;
+            this.genderTextBox.Size = new System.Drawing.Size(121, 20);
+            this.genderTextBox.TabIndex = 8;
             this.genderTextBox.TextChanged += new System.EventHandler(this.GenderTextBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Location = new System.Drawing.Point(64, 660);
+            this.label1.Location = new System.Drawing.Point(29, 336);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 55);
+            this.label1.Size = new System.Drawing.Size(94, 28);
             this.label1.TabIndex = 38;
             this.label1.Text = "Proof of purchase attached";
             // 
             // proofOfPurchaseTextBox
             // 
             this.proofOfPurchaseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.proofOfPurchaseTextBox.Location = new System.Drawing.Point(258, 663);
+            this.proofOfPurchaseTextBox.Location = new System.Drawing.Point(127, 338);
+            this.proofOfPurchaseTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.proofOfPurchaseTextBox.MaxLength = 1;
             this.proofOfPurchaseTextBox.Name = "proofOfPurchaseTextBox";
-            this.proofOfPurchaseTextBox.Size = new System.Drawing.Size(249, 31);
-            this.proofOfPurchaseTextBox.TabIndex = 39;
+            this.proofOfPurchaseTextBox.Size = new System.Drawing.Size(121, 20);
+            this.proofOfPurchaseTextBox.TabIndex = 11;
             this.proofOfPurchaseTextBox.TextChanged += new System.EventHandler(this.ProofOfPurchaseTextBox_TextChanged);
             // 
             // dataEntryTableLayoutPanel
@@ -466,7 +496,8 @@ namespace RebateForm
             this.dataEntryTableLayoutPanel.Controls.Add(this.ZipCodeLabel, 0, 8);
             this.dataEntryTableLayoutPanel.Controls.Add(this.ZipCodeTextBox, 1, 8);
             this.dataEntryTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataEntryTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.dataEntryTableLayoutPanel.Location = new System.Drawing.Point(2, 2);
+            this.dataEntryTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataEntryTableLayoutPanel.Name = "dataEntryTableLayoutPanel";
             this.dataEntryTableLayoutPanel.RowCount = 15;
             this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872617F));
@@ -484,7 +515,7 @@ namespace RebateForm
             this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
             this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.872616F));
             this.dataEntryTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.783376F));
-            this.dataEntryTableLayoutPanel.Size = new System.Drawing.Size(590, 811);
+            this.dataEntryTableLayoutPanel.Size = new System.Drawing.Size(289, 421);
             this.dataEntryTableLayoutPanel.TabIndex = 41;
             // 
             // dataButtonsTableLayoutPanel
@@ -497,11 +528,12 @@ namespace RebateForm
             this.dataButtonsTableLayoutPanel.Controls.Add(this.ClearButton, 2, 0);
             this.dataButtonsTableLayoutPanel.Controls.Add(this.AddButton, 0, 0);
             this.dataButtonsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataButtonsTableLayoutPanel.Location = new System.Drawing.Point(258, 773);
+            this.dataButtonsTableLayoutPanel.Location = new System.Drawing.Point(127, 394);
+            this.dataButtonsTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataButtonsTableLayoutPanel.Name = "dataButtonsTableLayoutPanel";
             this.dataButtonsTableLayoutPanel.RowCount = 1;
             this.dataButtonsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dataButtonsTableLayoutPanel.Size = new System.Drawing.Size(249, 35);
+            this.dataButtonsTableLayoutPanel.Size = new System.Drawing.Size(121, 25);
             this.dataButtonsTableLayoutPanel.TabIndex = 43;
             // 
             // listViewTableLayoutPanel
@@ -511,13 +543,14 @@ namespace RebateForm
             this.listViewTableLayoutPanel.Controls.Add(this.stateButtonsTableLayoutPanel, 0, 2);
             this.listViewTableLayoutPanel.Controls.Add(this.viewPortListView, 0, 1);
             this.listViewTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewTableLayoutPanel.Location = new System.Drawing.Point(599, 3);
+            this.listViewTableLayoutPanel.Location = new System.Drawing.Point(295, 2);
+            this.listViewTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listViewTableLayoutPanel.Name = "listViewTableLayoutPanel";
             this.listViewTableLayoutPanel.RowCount = 3;
             this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
             this.listViewTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.listViewTableLayoutPanel.Size = new System.Drawing.Size(590, 811);
+            this.listViewTableLayoutPanel.Size = new System.Drawing.Size(289, 421);
             this.listViewTableLayoutPanel.TabIndex = 42;
             // 
             // stateButtonsTableLayoutPanel
@@ -529,20 +562,22 @@ namespace RebateForm
             this.stateButtonsTableLayoutPanel.Controls.Add(this.saveButton, 1, 0);
             this.stateButtonsTableLayoutPanel.Controls.Add(this.cancelButton, 2, 0);
             this.stateButtonsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stateButtonsTableLayoutPanel.Location = new System.Drawing.Point(3, 772);
+            this.stateButtonsTableLayoutPanel.Location = new System.Drawing.Point(2, 401);
+            this.stateButtonsTableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stateButtonsTableLayoutPanel.Name = "stateButtonsTableLayoutPanel";
             this.stateButtonsTableLayoutPanel.RowCount = 1;
             this.stateButtonsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.stateButtonsTableLayoutPanel.Size = new System.Drawing.Size(584, 36);
+            this.stateButtonsTableLayoutPanel.Size = new System.Drawing.Size(285, 18);
             this.stateButtonsTableLayoutPanel.TabIndex = 44;
             // 
             // saveButton
             // 
             this.saveButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveButton.Location = new System.Drawing.Point(197, 3);
+            this.saveButton.Location = new System.Drawing.Point(97, 2);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(188, 30);
-            this.saveButton.TabIndex = 34;
+            this.saveButton.Size = new System.Drawing.Size(91, 14);
+            this.saveButton.TabIndex = 0;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -550,10 +585,11 @@ namespace RebateForm
             // cancelButton
             // 
             this.cancelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cancelButton.Location = new System.Drawing.Point(391, 3);
+            this.cancelButton.Location = new System.Drawing.Point(192, 2);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(190, 30);
-            this.cancelButton.TabIndex = 35;
+            this.cancelButton.Size = new System.Drawing.Size(91, 14);
+            this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -567,16 +603,17 @@ namespace RebateForm
             this.tableLayoutPanel4.Controls.Add(this.listViewTableLayoutPanel, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1192, 817);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(586, 425);
             this.tableLayoutPanel4.TabIndex = 43;
             // 
             // stripStatusLabel
             // 
             this.stripStatusLabel.Name = "stripStatusLabel";
-            this.stripStatusLabel.Size = new System.Drawing.Size(127, 32);
+            this.stripStatusLabel.Size = new System.Drawing.Size(63, 17);
             this.stripStatusLabel.Text = "Add mode";
             // 
             // statusStrip
@@ -585,20 +622,22 @@ namespace RebateForm
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripStatusLabel});
             this.statusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStrip.Location = new System.Drawing.Point(0, 817);
+            this.statusStrip.Location = new System.Drawing.Point(0, 425);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1192, 42);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.statusStrip.Size = new System.Drawing.Size(586, 22);
             this.statusStrip.TabIndex = 40;
             this.statusStrip.Text = "statusStrip1";
             // 
             // RebateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 859);
+            this.ClientSize = new System.Drawing.Size(586, 447);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.statusStrip);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RebateForm";
             this.Text = "Rebate Form";
             this.Load += new System.EventHandler(this.RebateForm_Load);
